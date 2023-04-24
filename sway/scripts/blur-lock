@@ -1,0 +1,28 @@
+#!/usr/bin/env bash
+
+#script by Nick mostly.
+#note - hardcoded monitor dimensions only. Consider neatening.
+#also don't like the use of the default imagemagick filenames here
+swayidle \
+    timeout  300 'swaymsg "output * dpms off"' \
+    resume 'swaymsg "output * dpms on"' &
+LPICTURE=/tmp/i3lock-0.png
+RPICTURE=/tmp/i3lock-1.png
+PICTURE=/tmp/i3lock.png
+#LSCREENSHOT="scrot -zoa 0,0,1920,1200 $LPICTURE"
+#RSCREENSHoOT="scrot -zoa 1920,0,1920,1200 $RPICTURE"
+# for future reference - pixelate command:
+# convert grim.png -crop 50%x100% -scale 10% -scale 1000% grim.png
+SCREENSHOT="/usr/share/sway/scripts/grimshot save screen $PICTURE > /dev/null"
+
+
+BLUR="0x15"
+$SCREENSHOT
+#convert $PICTURE -crop 50%x100% -blur $BLUR $PICTURE
+convert $PICTURE -crop 50%x100% -scale 5% -scale 2000% $PICTURE
+swaylock -i DP-1:$LPICTURE -i DVI-D-1:$RPICTURE
+#Kills last background task so idle timer doesn't keep running
+kill %%
+rm $PICTURE
+rm $LPICTURE
+rm $RPICTURE

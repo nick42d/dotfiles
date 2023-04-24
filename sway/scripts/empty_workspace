@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+
+MAX_DESKTOPS=20
+
+WORKSPACES=$(seq -s '\n' 1 1 ${MAX_DESKTOPS})
+
+#Nick's expiriment to select current screen first... WIP
+#OUTPUT=$(((slurp -o -b #00000000 > /tmp/cursor-output & sleep 0.1; swaymsg seat "*" cursor press button1; swaymsg seat "*" cursor release button1) > /dev/null; sleep 0.15; cat /tmp/cursor-output && rm -rf /tmp/cursor-output) | awk -F" " '{print $1}')
+
+EMPTY_WORKSPACE=$( (swaymsg -t get_workspaces | tr ',' '\n' | grep num | awk -F:  '{print int($2)}' ; \
+            echo -e ${WORKSPACES} ) | sort -n | uniq -u | head -n 1)
+
+#added by Nick - move window first
+#i3-msg move container to workspace ${EMPTY_WORKSPACE}
+
+swaymsg workspace ${EMPTY_WORKSPACE}

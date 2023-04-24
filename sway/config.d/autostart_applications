@@ -1,0 +1,32 @@
+# Auth with polkit-gnome:
+exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+
+# Desktop notifications
+exec mako
+
+# Network Applet
+exec nm-applet --indicator
+
+# GTK3 applications take a long time to start
+exec systemctl --user import-environment DISPLAY WAYLAND_DISPLAY SWAYSOCK
+exec hash dbus-update-activation-environment 2>/dev/null && \
+     dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK
+     
+# Welcome App
+exec dex -a -s /etc/xdg/autostart/:~/.config/autostart/  
+
+# Sway Fader
+exec python3 ~/.config/sway/scripts/swayfader.py
+
+# start conky:
+# Nick's test of multiple Conky displays
+# Probably doesn't work on Wayland
+# exec --no-startup-id conky -m 1 -a top_right
+# exec --no-startup-id conky -m 0 -a top_right
+
+# Added by Nick - Python script to add workspace icons
+exec_always --no-startup-id /home/nickd/git/i3scripts/autoname_workspaces_sway.py --norenumber_workspaces &
+
+# Added by Nick - hack to disable middle click mouse paste.
+# doesn't seem to work but glitches out xedit
+# exec wl-paste --primary --watch wl-copy --primary --clear

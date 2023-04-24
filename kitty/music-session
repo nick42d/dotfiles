@@ -1,0 +1,7 @@
+# Set the layout for the current tab
+layout tall:bias=20;mirrored=true 
+# Create a window and run the specified command in it
+launch conky
+launch cmus
+launch vis
+resize_window shorter 6
