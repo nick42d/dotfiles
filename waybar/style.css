@@ -75,6 +75,7 @@ Arc-Dark Color Scheme
 #custom-gputemp,
 #custom-power,
 #custom-weather,
+#custom-newworkspace,
 #network,
 #pulseaudio,
 #temperature,
@@ -89,7 +90,6 @@ Arc-Dark Color Scheme
 /* -----------------------------------------------------------------------------
  * Modules styles
  * -------------------------------------------------------------------------- */
-
 #battery {
     animation-timing-function: linear;
     animation-iteration-count: infinite;

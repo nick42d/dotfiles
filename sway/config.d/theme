@@ -1,10 +1,13 @@
+# Added by Nick - turn off primary selection
+#
+# primary_selection disabled
+
 # Apply gtk theming
 exec_always ~/.config/sway/scripts/import-gsettings
 
 # Added by Nick - turn off focus follows mouse and mouse warping
 focus_follows_mouse no
 mouse_warping none
-
 # Set inner/outer gaps
 gaps inner 2
 gaps outer 4

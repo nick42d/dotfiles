@@ -1,4 +1,4 @@
-vim.opt.guicursor = ""
+vim.opt.guicursor = {'i:ver25' }
 
 vim.opt.nu = true
 vim.opt.relativenumber = true
@@ -15,3 +15,6 @@ vim.opt.smartindent = true
 vim.opt.wrap = false
 
 vim.g.mapleader = " "
+
+vim.g.rustfmt_autosave = 1
+

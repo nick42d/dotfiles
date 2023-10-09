@@ -10,13 +10,16 @@ return require('packer').startup(function(use)
   use 'neovim/nvim-lspconfig'
   use 'williamboman/nvim-lsp-installer'
   use 'timonv/vim-cargo'
+  use 'rust-lang/rust.vim'
 -- slint vim tools
   use 'slint-ui/vim-slint'
 --  use 'simrat39/rust-tools.nvim'
   
   use 'nvim-lua/plenary.nvim'
 --  use 'mfussenegger/nvim-dap'
---autocomplete
+--autocomplete 
+
+-- Not working great
   use 'hrsh7th/nvim-cmp' -- Autocompletion plugin
   use 'hrsh7th/cmp-nvim-lsp' -- LSP source for nvim-cmp
   use 'saadparwaiz1/cmp_luasnip' -- Snippets source for nvim-cmp
@@ -35,4 +38,9 @@ return require('packer').startup(function(use)
       'nvim-lualine/lualine.nvim',
       requires = { 'kyazdani42/nvim-web-devicons', opt = true }
   }
+--buffer line
+use 'nvim-tree/nvim-web-devicons' -- OPTIONAL: for file icons
+use 'lewis6991/gitsigns.nvim' -- OPTIONAL: for git status
+use 'romgrk/barbar.nvim'
+use "lukas-reineke/indent-blankline.nvim"
 end)

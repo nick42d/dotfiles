@@ -1,0 +1,34 @@
+add /run/media/nickd/Shared Drive/Music
+add /run/media/nickd/Shared Drive/Movies/
+help
+q
+add /run/media/nickd/Shared Drive/Music/
+clear
+add /run/media/nickd/Shared Drive/Mu
+add /run/media/nickd/Shared Drive/
+filter genre="*rogressive*"
+filter progressivex
+f progressivex
+fset progressivex=genre="*progressive*"
+filter classicalx
+fset classicalx=genre="*classical*"
+fset metal=genre="*Metal"
+a /run/media/nickd/7C74986E54EE8E0A/Music
+fil
+factivate !metal
+factivate metal
+fset unheard1=play_count=0
+fset classical=genre="Classical"
+fset classical
+fset classical=
+factivate !classical
+factivate classical
+fset
+factivate
+fset mp3=filename="*.mp3"
+fset missing-tag=!stream&(artist=""|album=""|title=""|tracknumber=-1|date=-1)
+filter F
+shell 
+set input.ffmpeg.priority=30
+v
+add /run/media/nickd/7C74986E54EE8E0A/Music/

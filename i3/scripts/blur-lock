@@ -1,0 +1,25 @@
+#!/usr/bin/env bash
+
+#note - setup for current monitor dimensions only. Consider neatening.
+#LPICTURE=/tmp/i3lock-l.png
+#RPICTURE=/tmp/i3lock-r.png
+PICTURE=/tmp/i3lock.png
+#LSCREENSHOT="scrot -zoa 0,0,1920,1200 $LPICTURE"
+#RSCREENSHOT="scrot -zoa 1920,0,1920,1200 $RPICTURE"
+SCREENSHOT="scrot -zo $PICTURE"
+
+
+#default BLUR="5x4"
+#Nick's test
+BLUR="0x15"
+
+#$LSCREENSHOT
+#$RSCREENSHOT
+$SCREENSHOT
+#convert $LPICTURE -blur $BLUR $LPICTURE
+#convert $RPICTURE -blur $BLUR $RPICTURE
+convert $PICTURE -blur $BLUR $PICTURE
+#Nicks edit - try xflock4
+i3lock -i $PICTURE
+#xfce4-screensaver-command --lock
+rm $PICTURE

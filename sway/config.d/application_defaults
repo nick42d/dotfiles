@@ -27,7 +27,7 @@ for_window [app_id="(?i)gsimplecal"] floating enable, move position mouse, move 
 # set floating (nontiling)for apps needing it:
 for_window [class="Yad" instance="yad"] floating enable
 for_window [app_id="yad"] floating enable
-for_window [app_id="test_slint_beta"] floating enable
+for_window [app_id="slinted"] floating enable
 for_window [app_id="blueman-manager"] floating enable,  resize set width 40 ppt height 30 ppt
 for_window [class="Galculator" instance="galculator"] floating enable
 for_window [class="Blueberry.py" instance="blueberry.py"] floating enable

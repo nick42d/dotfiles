@@ -10,6 +10,11 @@ input type:touchpad {
     natural_scroll enabled
 }
 
+input type:keyboard {
+    # Added by Nick - Remap Caps to Escape - for Helix/Vim
+    xkb_options caps:escape
+}
+
 input type:mouse {
     accel_profile "flat"
 }
@@ -20,6 +25,7 @@ input type:keyboard xkb_layout "us"
 
 # Added by Nick - From Arch wiki - enable numlock
 input * xkb_numlock enable
+
 
 exec_always {
     'swaymsg input type:keyboard xkb_layout "$(localectl status | grep "X11 Layout" | sed -e "s/^.*X11 Layout://")"'
