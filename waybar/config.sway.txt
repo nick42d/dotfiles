@@ -9,9 +9,9 @@
 
     "modules-left": [
         //"custom/launcher",
-        "hyprland/workspaces",
-        //"hyprland/window",
-        "hyprland/submap",
+        "sway/workspaces",
+        //"sway/window",
+        "sway/mode",
         "custom/newworkspace",
     ],
  
@@ -168,26 +168,30 @@
         "tooltip-format": "{ifname}: {ipaddr}/{cidr}",
     },
 
-    "hyprland/submap": {
+    "sway/mode": {
         "format": "{}",
         "tooltip": false
     },
 
-    //"hyprland/window": {
+    //"sway/window": {
     //    "format": "{}",
     //    "max-length": 50,
     //},
 
+
+
     "hyprland/workspaces": {
+        "disable-scroll": true,
+        "disable-markup" : false,
         "all-outputs": false,
-        "format": "{name}:{windows}",
-        "format-window-separator": "",
-        "window-rewrite-default": "",
-        "window-rewrite": {
-            "firefox": "",
-            "kitty": "",
-            "code": "󰨞",
-        },
+        "format": "  {icon}  ",
+        //"format":"{icon}",
+//        "format-icons": {
+//            "1": "",
+//            "2": "",
+//            "3": "",
+//            "4": "",
+//        }
     },
 
     "pulseaudio": {
@@ -277,7 +281,7 @@
 
     "custom/newworkspace": {
         "format":"  * ",
-        "on-click": "exec ~/.config/hypr/scripts/empty_workspace",
+        "on-click": "exec ~/.config/sway/scripts/empty_workspace",
         "tooltip": false,
     },
 }
