@@ -1,7 +1,3 @@
-# Added by Nick - turn off primary selection
-#
-# primary_selection disabled
-
 # Apply gtk theming
 exec_always ~/.config/sway/scripts/import-gsettings
 

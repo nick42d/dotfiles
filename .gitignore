@@ -1,0 +1,15 @@
+*
+!.gitignore
+!cmus
+!conky
+!cura
+!helix
+!hypr
+!i3
+!kitty
+!nvim
+!rofi
+!sway
+!swaylock
+!waybar
+!wofi
