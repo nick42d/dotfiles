@@ -13,7 +13,7 @@ PICTURE=/tmp/i3lock.png
 #RSCREENSHoOT="scrot -zoa 1920,0,1920,1200 $RPICTURE"
 # for future reference - pixelate command:
 # convert grim.png -crop 50%x100% -scale 10% -scale 1000% grim.png
-SCREENSHOT="/usr/share/sway/scripts/grimshot save screen $PICTURE > /dev/null"
+SCREENSHOT="grimshot save screen $PICTURE > /dev/null"
 
 
 BLUR="0x15"
