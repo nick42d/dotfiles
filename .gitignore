@@ -1,5 +1,6 @@
 *
 !.gitignore
+!fuzzel
 !cmus
 !conky
 !cura
