@@ -1,10 +1,11 @@
 *
-!.gitignore
-!fuzzel
-!fuzzel/*
+!broot
 !cmus
 !conky
 !cura
+!fuzzel
+!fuzzel/*
+!.gitignore
 !helix
 !hypr
 !i3
