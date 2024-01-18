@@ -17,3 +17,8 @@
 !waybar
 !wofi
 !.zshrc
+!fish
+!fish/conf.d
+!fish/conf.d/*
+!fish/fish_*
+!fish/config.fish
