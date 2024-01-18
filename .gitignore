@@ -20,5 +20,5 @@
 !fish
 !fish/conf.d
 !fish/conf.d/*
-!fish/fish_*
+!fish/fish_plugins
 !fish/config.fish
