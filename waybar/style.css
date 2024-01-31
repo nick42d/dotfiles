@@ -15,7 +15,7 @@ Arc-Dark Color Scheme
 */
 @define-color highlight #5294e2 ;
 @define-color background #dddddd ;
-@define-color base1  rgba(40,45,52,0.8);
+@define-color base1 rgba(40,45,52,0.8);
 
 @keyframes blink-warning {
     70% {
@@ -145,7 +145,7 @@ Arc-Dark Color Scheme
     border-bottom: 3px transparent;
     color:white;
     margin-left: 5px;
-    padding:7;
+    padding:7px;
 }
 
 #network.disconnected {
@@ -176,6 +176,7 @@ Arc-Dark Color Scheme
     border-bottom: 3px solid transparent;
     margin-bottom: 0px;
     padding:0px;
+    color: #bebebe; 
 }
 
 #workspaces button.visible {
