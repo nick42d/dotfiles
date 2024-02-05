@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+
+MAX_DESKTOPS=20
+
+WORKSPACES=$(seq -s '\n' 1 1 ${MAX_DESKTOPS})
+
+CURSOR_POS_X=$(hyprctl cursorpos | awk -F, '{print int($1)}')
+
+CUR_MONITOR=$(expr $(( $(($CURSOR_POS_X - 1)) / 1920 ))  + 1)
+
+CUR_MONITOR_NAME=$(hyprctl monitors | grep Monitor | awk -v cur=$CUR_MONITOR 'FNR == cur {print $cur}')
+
+EMPTY_WORKSPACE=$((hyprctl workspaces | grep ID | awk '{print int($3)}' ; \
+            echo -e $WORKSPACES) | sort -n | uniq -u | head -n 1)
+
+hyprctl dispatch workspace ${EMPTY_WORKSPACE}
+hyprctl dispatch moveworkspacetomonitor ${EMPTY_WORKSPACE} ${CUR_MONITOR_NAME}
