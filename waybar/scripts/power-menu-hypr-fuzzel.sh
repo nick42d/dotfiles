@@ -6,15 +6,11 @@ selected=$(printf '%s\n' $entries | fuzzel -d -l 4 -w 10 | awk '{print tolower($
 
 case $selected in
   logout)
-    # hyprctl dispatch exit;;
-    echo "logout";;
+    hyprctl dispatch exit;;
   suspend)
-    # exec systemctl suspend;;
-    echo "suspend";;
+    exec systemctl suspend;;
   reboot)
-    # exec systemctl reboot;;
-    echo "reboot";;
+    exec systemctl reboot;;
   shutdown)
-    # exec systemctl poweroff -i;;
-    echo "shutdown";;
+    exec systemctl poweroff -i;;
 esac
