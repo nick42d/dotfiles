@@ -310,7 +310,7 @@
 
     "custom/chrome": {
         "format": " ",
-        "on-click": "exec google-chrome",
+        "on-click": "exec google-chrome-stable",
         "tooltip": false
     },
 
