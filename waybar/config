@@ -334,7 +334,7 @@
 
     "custom/power": {
         "format":"⏻",
-        "on-click": "exec ~/.config/waybar/scripts/power-menu-hypr.sh",
+        "on-click": "exec ~/.config/waybar/scripts/power-menu-hypr-fuzzel.sh",
         "tooltip": false,
     },
 
