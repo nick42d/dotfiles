@@ -310,7 +310,7 @@
 
     "custom/chrome": {
         "format": " ",
-        "on-click": "exec google-chrome-beta",
+        "on-click": "exec google-chrome",
         "tooltip": false
     },
 
