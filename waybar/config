@@ -60,11 +60,11 @@
             "critical": 15
         },
         "format": "{capacity}% {icon}",
-        "format-charging": "{capacity}% ",
-        "format-plugged": "{capacity}% ",
+        "format-charging": "{capacity}% {icon}󱐋",
+        "format-plugged": "{capacity}% {icon}",
         // "format-good": "", // An empty format will hide the module
         // "format-full": "",
-        "format-icons": ["", "", "", "", ""]
+        "format-icons": ["󰂎", "󰁼", "󰁾", "󰂁", "󰁹"]
     },
 
     "custom/PBPbattery": {
@@ -258,14 +258,14 @@
         "min-length": 10,
         "format": "{icon} {volume}% {format_source}",
         "format-bluetooth": "{icon} {volume}%  {format_source}",
-        "format-bluetooth-muted": "婢 {volume}%  {format_source}",
-        "format-muted": "婢 {volume}% {format_source}",
+        "format-bluetooth-muted": "󰍭 {volume}%  {format_source}",
+        "format-muted": "󰍭 {volume}% {format_source}",
         "format-source": "",
-        "format-source-muted": "",
+        "format-source-muted": "󰍭",
         "format-icons": {
-            "headphone": "",
-            "hands-free": "וֹ",
-            "headset": "  ",
+            "headphone": "󰋋",
+            "hands-free": "󰋎",
+            "headset": "󰋎",
             "phone": "",
             "portable": "",
             "car": "",
@@ -292,7 +292,7 @@
 
     "backlight#icon": {
         "format": "{icon}",
-        "format-icons": [""],
+        "format-icons": ["󰃟 "],
         "on-scroll-down": "brightnessctl -c backlight set 1%-",
         "on-scroll-up": "brightnessctl -c backlight set +1%"
     },
