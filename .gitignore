@@ -9,6 +9,7 @@
 !helix
 !helix/languages.toml
 !hypr
+!hypr/hyprlock.conf
 !hypr/scripts
 !hypr/scripts/*
 !i3
