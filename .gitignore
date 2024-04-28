@@ -11,7 +11,7 @@
 !hypr
 !hypr/hyprlock.conf
 !hypr/scripts
-!hypr/scripts/*
+!hypr/scripts/**
 !i3
 !kitty
 !nvim
@@ -21,7 +21,7 @@
 !sway
 !swaylock
 !waybar
-!waybar/scripts/*
+!waybar/scripts/**
 !waybar/scripts
 !wofi
 !.zshrc

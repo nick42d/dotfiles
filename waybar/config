@@ -19,10 +19,11 @@
     ],
 
     "modules-right": [
-        "custom/terminal",
-        "custom/chrome",
-        "custom/files",
-        "custom/separator",
+        // "custom/terminal",
+        // "custom/chrome",
+        // "custom/files",
+        // "custom/separator",
+        "custom/pacman",
         "network",
         "disk",
         "memory",
@@ -90,6 +91,18 @@
         "align": 1.0,
     },
 
+    // https://github.com/savely-krasovsky/waybar-updates
+    "custom/pacman": {
+        "format": "{icon}{}",
+        "return-type": "json",
+        "format-icons": {
+            "pending-updates": " ",
+            "updated": ""
+        },
+        "exec-if": "which ~/.config/waybar/scripts/waybar-updates/waybar-updates",
+        "exec": "~/.config/waybar/scripts/waybar-updates/waybar-updates",
+    },
+    
     "custom/cputemp": {
         "exec": "sensors | grep -oE 'Tctl: {,}[+-][0-9]{1,3}' | cut -c 16-19",
         "interval": 5,
@@ -100,6 +113,7 @@
     },
 
     "custom/gpu": {
+        "exec-if": "which radeontop",
         "exec": "radeontop -d- -l1 | grep -oE 'gpu [0-9]{1,3}' | cut -c 5-9",
         "interval": 5,
         "format": "󰢮 {}% ",
