@@ -1,24 +1,44 @@
- [[language]]
- name = "typescript"
- language-servers = [  "typescript-language-server", "eslint"]
- formatter = { command = 'prettier', args = ["--parser", "typescript"] }
- auto-format = true
+[[language]]
+name = "typescript"
+language-servers = [  "typescript-language-server", "eslint"]
+formatter = { command = 'prettier', args = ["--parser", "typescript"] }
+auto-format = true
 
- [[language]]
- name = "tsx"
- language-servers = [ "typescript-language-server", "eslint",]
- formatter = { command = 'prettier', args = ["--parser", "typescript"] }
- auto-format = true
+[[language]]
+name = "tsx"
+language-servers = [ "typescript-language-server", "eslint",]
+formatter = { command = 'prettier', args = ["--parser", "typescript"] }
+auto-format = true
 
- [[language]]
- name = "jsx"
- language-servers = [ "typescript-language-server", "eslint"]
- grammar = "javascript"
- formatter = { command = 'prettier', args = ["--parser", "typescript"] }
- auto-format = true
+[[language]]
+name = "jsx"
+language-servers = [ "typescript-language-server", "eslint"]
+grammar = "javascript"
+formatter = { command = 'prettier', args = ["--parser", "typescript"] }
+auto-format = true
 
- [[language]]
- name = "javascript"
- language-servers = [ "typescript-language-server",  "eslint"]
- formatter = { command = 'prettier', args = ["--parser", "typescript"] }
- auto-format = true
+[[language]]
+name = "javascript"
+language-servers = [ "typescript-language-server",  "eslint"]
+formatter = { command = 'prettier', args = ["--parser", "typescript"] }
+auto-format = true
+
+[[language]]
+name = "rust"
+scope = "source.rust"
+injection-regex = "rs|rust"
+file-types = ["rs"]
+roots = ["Cargo.toml", "Cargo.lock"]
+shebangs = ["rust-script", "cargo"]
+# Default settings from helix - only change is to use nightly rustfmt for comment wrapping.
+formatter = { command = "rustfmt", args=["+nightly"] }
+auto-format = true
+comment-tokens = ["//", "///", "//!"]
+block-comment-tokens = [ 
+  { start = "/*", end = "*/" },
+  { start = "/**", end = "*/" },
+  { start = "/*!", end = "*/" },
+]
+language-servers = [ "rust-analyzer" ]
+indent = { tab-width = 4, unit = "    " }
+persistent-diagnostic-sources = ["rustc", "clippy"]
