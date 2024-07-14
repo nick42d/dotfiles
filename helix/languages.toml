@@ -73,3 +73,6 @@ block-comment-tokens = [
 language-servers = [ "rust-analyzer" ]
 indent = { tab-width = 4, unit = "    " }
 persistent-diagnostic-sources = ["rustc", "clippy"]
+
+[language-server.rust-analyzer.config]
+check.command = "clippy"
