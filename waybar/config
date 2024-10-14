@@ -93,14 +93,14 @@
 
     // https://github.com/savely-krasovsky/waybar-updates
     "custom/pacman": {
-        "format": "{icon}{}",
+        "format": "{} {icon}",
         "return-type": "json",
         "format-icons": {
             "pending-updates": " ",
             "updated": ""
         },
-        "exec-if": "which ~/.config/waybar/scripts/waybar-updates/waybar-updates",
-        "exec": "~/.config/waybar/scripts/waybar-updates/waybar-updates",
+        "exec-if": "which waybar-updates",
+        "exec": "waybar-updates",
     },
     
     "custom/cputemp": {
