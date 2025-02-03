@@ -24,7 +24,7 @@ render = true
 
 [editor.file-picker]
 hidden = false
-git-ignore = false
+# git-ignore = false
 
 [keys.insert]
 up = "no_op"
