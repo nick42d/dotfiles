@@ -77,3 +77,9 @@ persistent-diagnostic-sources = ["rustc", "clippy"]
 [language-server.rust-analyzer.config]
 check.command = "clippy"
 cargo.allFeatures = true
+inlayHints.bindingModeHints.enable = false
+inlayHints.closingBraceHints.minLines = 10
+inlayHints.closureReturnTypeHints.enable = "with_block"
+inlayHints.discriminantHints.enable = "fieldless"
+inlayHints.lifetimeElisionHints.enable = "skip_trivial"
+inlayHints.typeHints.hideClosureInitialization = false
