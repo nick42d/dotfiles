@@ -24,6 +24,11 @@
 !waybar/scripts/**
 !waybar/scripts
 !wofi
+!paru
+!paru/paru.conf
+!autostart
+!autostart/*
+!paru/paru.conf
 !.zshrc
 !fish
 !fish/conf.d

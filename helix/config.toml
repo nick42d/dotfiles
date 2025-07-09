@@ -5,7 +5,7 @@ line-number = "relative"
 middle-click-paste = false
 bufferline = "multiple"
 color-modes = true
-completion-replace = true
+completion-replace = false
 auto-save = true
 mouse = false
 auto-pairs = false
@@ -18,6 +18,9 @@ select = "underline"
 
 [editor.statusline]
 right = ["diagnostics", "selections", "position", "file-encoding", "file-type"]
+
+[editor.inline-diagnostics]
+cursor-line = "hint"
 
 [editor.indent-guides]
 render = true
@@ -35,6 +38,9 @@ pageup = "no_op"
 pagedown = "no_op"
 home = "no_op"
 end = "no_op"
+
+[keys.normal.space]
+"H" = ":toggle lsp.display-inlay-hints"
 
 # [keys.normal]
 # up = "no_op"
