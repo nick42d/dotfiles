@@ -10,6 +10,9 @@ auto-save = true
 mouse = false
 auto-pairs = false
 
+[editor.inline-diagnostics]
+cursor-line = "hint"
+other-lines = "disable"
 
 [editor.cursor-shape]
 insert = "bar"
@@ -27,7 +30,7 @@ render = true
 
 [editor.file-picker]
 hidden = false
-git-ignore = false
+# git-ignore = false
 
 [keys.insert]
 up = "no_op"
